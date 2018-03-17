@@ -11,6 +11,10 @@
 #'@export
 Mean.1Pop.Hypothesis = function(xbar, mu, variance, n, popVarKnown=T, alternative="two.sided", alpha=0.05){
 
+  if(!(alternative %in% c("smaller", "greater", "two.sided"))){
+    stop(message=("Parameter alternative must be 'smaller', 'greater', or 'two.sided'"))
+  }
+
   testStat = (xbar - mu) / sqrt(variance / n)
   result = NULL
   pvalue = NULL
