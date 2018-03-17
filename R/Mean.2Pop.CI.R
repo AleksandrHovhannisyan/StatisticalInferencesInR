@@ -47,7 +47,7 @@ Mean.2Pop.cI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKno
 
   if(one.sided){
     cat(confidence, "One-Sided Confidence Intervals:\n\n")
-    interval = list( lower=c(xbar - marginOfError, Inf), upper=c(0, xbar + marginOfError) )
+    interval = list( lowerBound=c(xbar - marginOfError, Inf), upperBound=c(0, xbar + marginOfError) )
   }
   else{
     cat(confidence, "Two-Sided Confidence Interval:\n\n")
