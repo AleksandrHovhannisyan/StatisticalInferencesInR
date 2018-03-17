@@ -8,7 +8,7 @@
 #' @param one.sided Boolean denoting whether the function should return one-sided confidence intervals. False by default.
 #' @return The confidence interval(s): one-sided lower and upper bounds or just the two-sided confidence interval.
 #' @export
-Mean.1Pop.CI.R <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided=F){
+Mean.1Pop.CI <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided=F){
 
   confidence = cat(100*(1-alpha), "%")
 
