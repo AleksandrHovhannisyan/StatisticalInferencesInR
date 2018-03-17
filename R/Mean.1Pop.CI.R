@@ -10,7 +10,7 @@
 #' @export
 Mean.1Pop.CI <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided=F){
 
-  confidence = cat(100*(1-alpha), "%")
+  confidence = cat(100*(1-alpha),"%")
 
   interval = NULL
 
@@ -24,7 +24,7 @@ Mean.1Pop.CI <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided
   marginOfError = testStat * sqrt(variance / n)
 
   if(one.sided){
-    upper=c(0, xbar + maginOfError)
+    upper=c(0, xbar + marginOfError)
     lower=c(xbar - marginOfError, Inf)
     interval = list(lowerBound=lower, upperBound=upper)
     cat(confidence, "One-Sided Confidence Intervals:\n")
