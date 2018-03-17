@@ -21,7 +21,7 @@ Mean.1Pop.CI(xbar, variance, n, popVarKnown = F, alpha = 0.05,
 \item{one.sided}{Boolean denoting whether the function should return one-sided confidence intervals. False by default.}
 }
 \value{
-The confidence interval(s): one-sided lower and upper bounds or just the two-sided confidence interval.
+The confidence interval(s): one-sided lower and upper bounds (in a list) or just the two-sided confidence interval (as a simple vector).
 }
 \description{
 Construct a 100(1-alpha) percent confidence interval for a single population mean

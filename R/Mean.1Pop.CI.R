@@ -6,7 +6,7 @@
 #' @param popVarKnown Boolean denoting whether the population variance is known. False by default.
 #' @param alpha The significance level. Set to 0.05 by default.
 #' @param one.sided Boolean denoting whether the function should return one-sided confidence intervals. False by default.
-#' @return The confidence interval(s): one-sided lower and upper bounds or just the two-sided confidence interval.
+#' @return The confidence interval(s): one-sided lower and upper bounds (in a list) or just the two-sided confidence interval (as a simple vector).
 #' @export
 Mean.1Pop.CI <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided=F){
 
