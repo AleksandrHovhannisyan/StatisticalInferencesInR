@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mean.1Pop.CI.R
 \name{Mean.1Pop.CI.R}
 \alias{Mean.1Pop.CI.R}
-\title{Construct a 100(1-alpha) percent confidence interval for population mean}
+\title{Construct a 100(1-alpha) percent confidence interval for the population mean}
 \usage{
 Mean.1Pop.CI.R(xbar, variance, n, popVarKnown = F, alpha = 0.05,
   one.sided = F)
@@ -24,5 +24,5 @@ Mean.1Pop.CI.R(xbar, variance, n, popVarKnown = F, alpha = 0.05,
 The confidence interval(s): one-sided lower and upper bounds or just the two-sided confidence interval.
 }
 \description{
-Construct a 100(1-alpha) percent confidence interval for population mean
+Construct a 100(1-alpha) percent confidence interval for the population mean
 }
