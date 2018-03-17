@@ -1,4 +1,4 @@
-#' Construct a 100(1-alpha) percent confidence interval for the population mean
+#' Construct a 100(1-alpha) percent confidence interval for a single population mean
 #'
 #' @param xbar The mean of the sample
 #' @param variance Either the sample or population variance (the latter only if it is known)
