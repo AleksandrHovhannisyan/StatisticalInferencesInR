@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1521294933846.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8E5B1A89",
+    "lastKnownWriteTime" : 1521295333,
+    "last_content_update" : 1521295333052,
+    "path" : "~/R/StatisticalInference/StatInferences/R/Mean.1Pop.CI.R",
+    "project_path" : "R/Mean.1Pop.CI.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
