@@ -16,7 +16,7 @@ Mean.1Pop.CI(xbar, variance, n, popVarKnown = F, alpha = 0.05,
 
 \item{popVarKnown}{Boolean denoting whether the population variance is known. False by default.}
 
-\item{alpha}{The confidence level. Set to 0.05 by default.}
+\item{alpha}{The significance level. Set to 0.05 by default.}
 
 \item{one.sided}{Boolean denoting whether the function should return one-sided confidence intervals. False by default.}
 }

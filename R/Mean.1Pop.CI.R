@@ -4,7 +4,7 @@
 #' @param variance Either the sample or population variance (the latter only if it is known)
 #' @param n The size of the sample
 #' @param popVarKnown Boolean denoting whether the population variance is known. False by default.
-#' @param alpha The confidence level. Set to 0.05 by default.
+#' @param alpha The significance level. Set to 0.05 by default.
 #' @param one.sided Boolean denoting whether the function should return one-sided confidence intervals. False by default.
 #' @return The confidence interval(s): one-sided lower and upper bounds or just the two-sided confidence interval.
 #' @export
