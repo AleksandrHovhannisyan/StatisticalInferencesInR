@@ -11,9 +11,10 @@
 #'@export
 Mean.1Pop.Hypothesis = function(xbar, mu, variance, n, popVarKnown=T, alternative="two.sided", alpha=0.05){
 
-  testStat = (xbar - mu) / (variance/sqrt(n))
-  pvalue = 0
-  cat("Test statistic: ", testStat, "\n", sep="")
+  testStat = (xbar - mu) / sqrt(variance / n)
+  result = NULL
+  pvalue = NULL
+  conclusion = "Fail to reject null hypothesis."
 
   if(popVarKnown){
     if(alternative=="greater"){ pvalue = pnorm(testStat, lower.tail = F) }
@@ -26,10 +27,9 @@ Mean.1Pop.Hypothesis = function(xbar, mu, variance, n, popVarKnown=T, alternativ
     else { pvalue = 2*pt(abs(testStat), n-1, lower.tail=F) }
   }
 
-  cat("P-value: ", pvalue, "\n", sep="")
+  if(pvalue <= alpha){ conclusion = "Reject null hypothesis." }
 
-  if(pvalue <= alpha){ cat("Reject null hypothesis.\n") }
-  else { cat("Fail to reject null hypothesis.\n") }
+  cat("\n")
 
-  return(pvalue)
+  return( list(test.stat=testStat, p.value=pvalue, conclusion=conclusion) )
 }
