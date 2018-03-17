@@ -31,17 +31,17 @@ Mean.2Pop.cI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKno
     degreesOfFreedom = 0
 
     if(equal){
-      sp = sqrt(((n1-1)*sampvar1 + (n2-1)*sampvar2)/(n1+n2-2))
+      sp = sqrt(((n1-1)*var1 + (n2-1)*var2)/(n1+n2-2))
       degreesOfFreedom = n1 + n2 - 2
-      testStat = abs(qt(alpha/2, df=v, lower.tail=F))
-      marginOfError = testStat * sqrt((1/n1)+(1/n2))
+      testStat = abs(qt(alpha/2, df=degreesOfFreedom, lower.tail=F))
+      marginOfError = testStat*sp*sqrt((1/n1)+(1/n2))
     }
     else{
       freedomNumerator = (var1/n1 + var2/n2)^2
       freedomDenominator = ( ((var1/n1)^2/(n1-1)) + ((var2/n2)^2/(n2-1)) )
       degreesOfFreedom = freedomNumerator / freedomDenominator
-      testStat = abs(qt(alpha/2, df=v, lower.tail=F))
-      marginOfError = testStat * sqrt((var1/n1 + var2/n2))
+      testStat = abs(qt(alpha/2, df=degreesOfFreedom, lower.tail=F))
+      marginOfError = testStat*sqrt((var1/n1 + var2/n2))
     }
   }
 
