@@ -1,16 +1,14 @@
 #' Construct a 100(1-alpha) percent confidence interval for a single population mean
 #'
-#' @param xbar The mean of the sample
-#' @param variance Either the sample or population variance (the latter only if it is known)
-#' @param n The size of the sample
+#' @param xbar The mean of the sample.
+#' @param variance Either the sample or population variance (the latter only if it is known).
+#' @param n The size of the sample.
 #' @param popVarKnown Boolean denoting whether the population variance is known. False by default.
 #' @param alpha The significance level. Set to 0.05 by default.
 #' @param one.sided Boolean denoting whether the function should return one-sided confidence intervals. False by default.
 #' @return The confidence interval(s): one-sided lower and upper bounds (in a list) or just the two-sided confidence interval (as a simple vector).
 #' @export
 Mean.1Pop.CI <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided=F){
-
-  confidence = cat("\n", 100*(1-alpha),"%", sep="")
 
   interval = NULL
 
@@ -23,14 +21,5 @@ Mean.1Pop.CI <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided
 
   marginOfError = testStat * sqrt(variance / n)
 
-  if(one.sided){
-    interval = list(lowerBound=c(xbar - marginOfError, Inf), upperBound=c(0, xbar + marginOfError))
-    cat(confidence, "One-Sided Confidence Intervals:\n\n")
-    return(interval)
-  }
-  else{
-    interval=c(xbar - marginOfError, xbar + marginOfError)
-    cat(confidence, "Two-Sided Confidence Interval:\n\n")
-    return(interval)
-  }
+  IntervalOutput(xbar, marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
 }

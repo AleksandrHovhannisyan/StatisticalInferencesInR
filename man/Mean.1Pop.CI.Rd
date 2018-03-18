@@ -8,11 +8,11 @@ Mean.1Pop.CI(xbar, variance, n, popVarKnown = F, alpha = 0.05,
   one.sided = F)
 }
 \arguments{
-\item{xbar}{The mean of the sample}
+\item{xbar}{The mean of the sample.}
 
-\item{variance}{Either the sample or population variance (the latter only if it is known)}
+\item{variance}{Either the sample or population variance (the latter only if it is known).}
 
-\item{n}{The size of the sample}
+\item{n}{The size of the sample.}
 
 \item{popVarKnown}{Boolean denoting whether the population variance is known. False by default.}
 
