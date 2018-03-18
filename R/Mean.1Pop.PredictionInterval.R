@@ -9,8 +9,6 @@
 #' @export
 Mean.1Pop.PredictionInterval <- function(xbar, variance, n, alpha=0.05, popVarKnown=F, one.sided=F){
 
-  confidence = cat("\n", 100*(1-alpha),"%", sep="")
-
   if(one.sided){ alpha = 2 * alpha }
 
   testStat = 0
@@ -26,5 +24,5 @@ Mean.1Pop.PredictionInterval <- function(xbar, variance, n, alpha=0.05, popVarKn
     marginOfError = testStat * variance * sqrt(1 + 1/n)
   }
 
-  IntervalOutput(xbar, marginOfError, confidence, "Prediction", one.sided)
+  IntervalOutput(xbar, marginOfError, GetConfidenceLevel(alpha), "Prediction", one.sided)
 }

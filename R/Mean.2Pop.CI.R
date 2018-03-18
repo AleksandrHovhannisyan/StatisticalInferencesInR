@@ -13,8 +13,6 @@
 #'@export
 Mean.2Pop.CI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKnown=F, equal=F, one.sided=F){
 
-  confidence = cat("\n", 100*(1-alpha),"%", sep="")
-
   xbar = xbar1 - xbar2
   testStat = 0
   marginOfError = 0
@@ -45,5 +43,5 @@ Mean.2Pop.CI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKno
     }
   }
 
-  IntervalOutput(xbar, marginOfError, confidence, "Confidence", one.sided)
+  IntervalOutput(xbar, marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
 }
