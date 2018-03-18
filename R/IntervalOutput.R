@@ -1,4 +1,5 @@
 #' Used internally by all functions producing intervals of any sort (prediction, confidence)
+#' @keywords internal
 IntervalOutput <- function(xbar, marginOfError, confidence, confidenceOrPrediction="Confidence", one.sided){
 
   interval = NULL

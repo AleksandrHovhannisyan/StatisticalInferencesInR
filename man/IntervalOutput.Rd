@@ -10,3 +10,4 @@ IntervalOutput(xbar, marginOfError, confidence,
 \description{
 Used internally by all functions producing intervals of any sort (prediction, confidence)
 }
+\keyword{internal}
