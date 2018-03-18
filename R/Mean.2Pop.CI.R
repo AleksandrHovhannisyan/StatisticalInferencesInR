@@ -11,7 +11,7 @@
 #'@param one.sided Boolean denoting whether the function should return one-sided confidence intervals. False by default.
 #'@return The confidence interval(s): one-sided lower and upper bounds (in a list) or just the two-sided confidence interval (as a simple vector).
 #'@export
-Mean.2Pop.cI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKnown=F, equal=F, one.sided=F){
+Mean.2Pop.CI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKnown=F, equal=F, one.sided=F){
 
   confidence = cat("\n", 100*(1-alpha),"%", sep="")
 
@@ -45,14 +45,5 @@ Mean.2Pop.cI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKno
     }
   }
 
-  if(one.sided){
-    cat(confidence, "One-Sided Confidence Intervals:\n\n")
-    interval = list( lowerBound=c(xbar - marginOfError, Inf), upperBound=c(0, xbar + marginOfError) )
-  }
-  else{
-    cat(confidence, "Two-Sided Confidence Interval:\n\n")
-    interval = c(xbar - marginOfError, xbar + marginOfError)
-  }
-
-  return(interval)
+  IntervalOutput(xbar, marginOfError, confidence, "Confidence", one.sided)
 }
