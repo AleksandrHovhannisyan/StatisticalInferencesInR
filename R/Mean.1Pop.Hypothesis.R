@@ -31,9 +31,5 @@ Mean.1Pop.Hypothesis = function(xbar, mu, variance, n, popVarKnown=T, alternativ
     else { pvalue = 2*pt(abs(testStat), n-1, lower.tail=F) }
   }
 
-  if(pvalue <= alpha){ conclusion = "Reject null hypothesis." }
-
-  cat("\n")
-
-  return( list(test.stat=testStat, p.value=pvalue, conclusion=conclusion) )
+  FormHypothesisConclusion(alpha, testStat, pvalue)
 }
