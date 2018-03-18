@@ -23,7 +23,7 @@ Mean.1Pop.Hypothesis(xbar, mu, variance, n, popVarKnown = T,
 \item{alpha}{the significance level. Set to 0.05 by default.}
 }
 \value{
-The pvalue produced by the hypothesis test.
+The test statistic, p-value, and conclusion of the hypothesis.
 }
 \description{
 Performs a hypothesis test with 100(1-alpha) percent confidence for the mean of a single population

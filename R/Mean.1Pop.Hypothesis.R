@@ -7,7 +7,7 @@
 #'@param popVarKnown boolean denoting whether the population variance is known. False by default.
 #'@param alternative string denoting the form of the alternative hypothesis Acceptable values are "smaller" (<), "greater" (>), and "one.sided" (=/=).
 #'@param alpha the significance level. Set to 0.05 by default.
-#'@return The pvalue produced by the hypothesis test.
+#'@return The test statistic, p-value, and conclusion of the hypothesis.
 #'@export
 Mean.1Pop.Hypothesis = function(xbar, mu, variance, n, popVarKnown=T, alternative="two.sided", alpha=0.05){
 
