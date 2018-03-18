@@ -10,7 +10,7 @@ Mean.1Pop.PredictionInterval(xbar, variance, n, alpha = 0.05,
 \arguments{
 \item{xbar}{The mean of the sample.}
 
-\item{variance}{Either the sample or population variance (the latter only if it is known)}
+\item{variance}{Either the sample or population variance (the latter only if it is known).}
 
 \item{n}{The size of the sample.}
 
