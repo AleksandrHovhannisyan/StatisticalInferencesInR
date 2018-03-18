@@ -4,7 +4,8 @@
 \alias{IntervalOutput}
 \title{Used internally by all functions producing intervals of any sort (prediction, confidence)}
 \usage{
-IntervalOutput(xbar, marginOfError, confidence, one.sided)
+IntervalOutput(xbar, marginOfError, confidence,
+  confidenceOrPrediction = "Confidence", one.sided)
 }
 \description{
 Used internally by all functions producing intervals of any sort (prediction, confidence)

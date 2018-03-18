@@ -1,14 +1,14 @@
 #' Used internally by all functions producing intervals of any sort (prediction, confidence)
-IntervalOutput <- function(xbar, marginOfError, confidence, one.sided){
+IntervalOutput <- function(xbar, marginOfError, confidence, confidenceOrPrediction="Confidence", one.sided){
 
   interval = NULL
 
   if(one.sided){
-    cat(confidence, "One-Sided Confidence Intervals:\n\n")
+    cat(confidence, "One-Sided ", confidenceOrPrediction, " Intervals:\n\n", sep="")
     interval = list(lowerBound=c(xbar - marginOfError, Inf), upperBound=c(0, xbar + marginOfError))
   }
   else{
-    cat(confidence, "Two-Sided Confidence Interval:\n\n")
+    cat(confidence, "Two-Sided ", confidenceOrPrediction, " Interval:\n\n", sep="")
     interval = c(xbar - marginOfError, xbar + marginOfError)
   }
 
