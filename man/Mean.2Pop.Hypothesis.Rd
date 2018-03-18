@@ -27,7 +27,7 @@ Mean.2Pop.Hypothesis(xbar1, xbar2, n1, n2, var1, var2,
 
 \item{alternative}{string denoting the form of the alternative hypothesis Acceptable values are "smaller" (<), "greater" (>), and "one.sided" (=/=).}
 
-\item{equal}{boolean denoting whether the population variances are equal. False by default. Used only in the case}
+\item{equal}{boolean denoting whether the population variances are equal. False by default. Used only in the case when the population variances are unknown.}
 
 \item{alpha}{the significance level. Set to 0.05 by default.}
 }

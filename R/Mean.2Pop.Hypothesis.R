@@ -9,7 +9,7 @@
 #'@param differenceInPopulationMeans the hypothesized difference between the population means. Set to 0 by default.
 #'@param popVarKnown boolean denoting whether the population variance is known. False by default.
 #'@param alternative string denoting the form of the alternative hypothesis Acceptable values are "smaller" (<), "greater" (>), and "one.sided" (=/=).
-#'@param equal boolean denoting whether the population variances are equal. False by default. Used only in the case
+#'@param equal boolean denoting whether the population variances are equal. False by default. Used only in the case when the population variances are unknown.
 #'@param alpha the significance level. Set to 0.05 by default.
 #'@return The test statistic, p-value, and conclusion of the hypothesis.
 #'@export
