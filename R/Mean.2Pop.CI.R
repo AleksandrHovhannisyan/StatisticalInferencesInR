@@ -1,14 +1,15 @@
-#' Construct a 100(1-alpha) percent confidence interval for the difference between two population means
-#'@param xbar1 The sample mean of population 1.
-#'@param xbar2 The sample mean of population 2.
-#'@param n1 The size of the sample from population 1.
-#'@param n2 The size of the sample from population 2.
-#'@param var1 The sample or population variance of population 1 (the latter only if it is known).
-#'@param var2 The sample or population variance of population 2 (the latter only if it is known).
-#'@param alpha The significance level. Set to 0.05 by default.
-#'@param popVarKnown Boolean denoting whether the population variance is known. False by default.
-#'@param equal Boolean denoting whether the population variances are equal. False by default. Used only in the case when the population variances are unknown.
-#'@param one.sided Boolean denoting whether the function should return one-sided confidence intervals. False by default.
+#'Two Population Means - Confidence Interval
+#'@description Constructs a 100(1-alpha) percent confidence interval for the difference between two population means
+#'@param xbar1 the sample mean of population 1
+#'@param xbar2 the sample mean of population 2
+#'@param n1 the size of the sample from population 1
+#'@param n2 the size of the sample from population 2
+#'@param var1 the sample or population variance of population 1 (the latter only if it is known).
+#'@param var2 the sample or population variance of population 2 (the latter only if it is known).
+#'@param alpha the significance level. Set to 0.05 by default.
+#'@param popVarKnown boolean denoting whether the population variance is known. False by default.
+#'@param equal boolean denoting whether the population variances are equal. False by default. Used only in the case when the population variances are unknown.
+#'@param one.sided boolean denoting whether the function should return one-sided confidence intervals. False by default.
 #'@return The confidence interval(s): one-sided lower and upper bounds (in a list) or just the two-sided confidence interval (as a simple vector).
 #'@export
 Mean.2Pop.CI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKnown=F, equal=F, one.sided=F){

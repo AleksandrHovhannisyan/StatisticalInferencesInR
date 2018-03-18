@@ -2,27 +2,27 @@
 % Please edit documentation in R/Mean.1Pop.CI.R
 \name{Mean.1Pop.CI}
 \alias{Mean.1Pop.CI}
-\title{Construct a 100(1-alpha) percent confidence interval for a single population mean}
+\title{One Population Mean - Confidence Interval}
 \usage{
 Mean.1Pop.CI(xbar, variance, n, popVarKnown = F, alpha = 0.05,
   one.sided = F)
 }
 \arguments{
-\item{xbar}{The mean of the sample.}
+\item{xbar}{the mean of the sample}
 
-\item{variance}{Either the sample or population variance (the latter only if it is known).}
+\item{variance}{either the sample or population variance (the latter only if it is known)}
 
-\item{n}{The size of the sample.}
+\item{n}{the size of the sample}
 
-\item{popVarKnown}{Boolean denoting whether the population variance is known. False by default.}
+\item{popVarKnown}{boolean denoting whether the population variance is known. False by default.}
 
-\item{alpha}{The significance level. Set to 0.05 by default.}
+\item{alpha}{the significance level. Set to 0.05 by default.}
 
-\item{one.sided}{Boolean denoting whether the function should return one-sided confidence intervals. False by default.}
+\item{one.sided}{boolean denoting whether the function should return one-sided confidence intervals. False by default.}
 }
 \value{
 The confidence interval(s): one-sided lower and upper bounds (in a list) or just the two-sided confidence interval (as a simple vector).
 }
 \description{
-Construct a 100(1-alpha) percent confidence interval for a single population mean
+Constructs a 100(1-alpha) percent confidence interval for a single population mean
 }

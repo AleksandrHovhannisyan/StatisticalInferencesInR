@@ -1,10 +1,11 @@
-#' Construct a 100(1-alpha) percent prediction interval for the future observation of a single population's mean
-#' @param xbar The mean of the sample.
-#' @param variance Either the sample or population variance (the latter only if it is known).
-#' @param n The size of the sample.
-#' @param alpha The significance level. Set to 0.05 by default.
-#' @param popVarKnown Boolean denoting whether the population variance is known. False by default.
-#' @param one.sided Boolean denoting whether the function should return one-sided confidence intervals. False by default.
+#' One Population Mean - Prediction Interval
+#' @description  Constructs a 100(1-alpha) percent prediction interval for the future observation of a single population's mean.
+#' @param xbar the mean of the sample
+#' @param variance either the sample or population variance (the latter only if it is known)
+#' @param n the size of the sample
+#' @param alpha the significance level. Set to 0.05 by default.
+#' @param popVarKnown boolean denoting whether the population variance is known. False by default.
+#' @param one.sided boolean denoting whether the function should return one-sided confidence intervals. False by default.
 #' @return The confidence interval(s): one-sided lower and upper bounds (in a list) or just the two-sided confidence interval (as a simple vector).
 #' @export
 Mean.1Pop.PredictionInterval <- function(xbar, variance, n, alpha=0.05, popVarKnown=F, one.sided=F){

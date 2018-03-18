@@ -2,35 +2,35 @@
 % Please edit documentation in R/Mean.2Pop.CI.R
 \name{Mean.2Pop.CI}
 \alias{Mean.2Pop.CI}
-\title{Construct a 100(1-alpha) percent confidence interval for the difference between two population means}
+\title{Two Population Means - Confidence Interval}
 \usage{
 Mean.2Pop.CI(xbar1, xbar2, n1, n2, var1, var2, alpha = 0.05,
   popVarKnown = F, equal = F, one.sided = F)
 }
 \arguments{
-\item{xbar1}{The sample mean of population 1.}
+\item{xbar1}{the sample mean of population 1}
 
-\item{xbar2}{The sample mean of population 2.}
+\item{xbar2}{the sample mean of population 2}
 
-\item{n1}{The size of the sample from population 1.}
+\item{n1}{the size of the sample from population 1}
 
-\item{n2}{The size of the sample from population 2.}
+\item{n2}{the size of the sample from population 2}
 
-\item{var1}{The sample or population variance of population 1 (the latter only if it is known).}
+\item{var1}{the sample or population variance of population 1 (the latter only if it is known).}
 
-\item{var2}{The sample or population variance of population 2 (the latter only if it is known).}
+\item{var2}{the sample or population variance of population 2 (the latter only if it is known).}
 
-\item{alpha}{The significance level. Set to 0.05 by default.}
+\item{alpha}{the significance level. Set to 0.05 by default.}
 
-\item{popVarKnown}{Boolean denoting whether the population variance is known. False by default.}
+\item{popVarKnown}{boolean denoting whether the population variance is known. False by default.}
 
-\item{equal}{Boolean denoting whether the population variances are equal. False by default. Used only in the case when the population variances are unknown.}
+\item{equal}{boolean denoting whether the population variances are equal. False by default. Used only in the case when the population variances are unknown.}
 
-\item{one.sided}{Boolean denoting whether the function should return one-sided confidence intervals. False by default.}
+\item{one.sided}{boolean denoting whether the function should return one-sided confidence intervals. False by default.}
 }
 \value{
 The confidence interval(s): one-sided lower and upper bounds (in a list) or just the two-sided confidence interval (as a simple vector).
 }
 \description{
-Construct a 100(1-alpha) percent confidence interval for the difference between two population means
+Constructs a 100(1-alpha) percent confidence interval for the difference between two population means
 }
