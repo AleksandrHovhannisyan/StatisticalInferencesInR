@@ -10,8 +10,6 @@
 #' @export
 Mean.1Pop.CI <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided=F){
 
-  interval = NULL
-
   if(one.sided){ alpha = 2 * alpha }
 
   testStat = 0
