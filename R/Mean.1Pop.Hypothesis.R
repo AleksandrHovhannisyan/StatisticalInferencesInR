@@ -16,7 +16,6 @@ Mean.1Pop.Hypothesis <- function(xbar, mu, variance, n, popVarKnown=T, alternati
   }
 
   testStat = (xbar - mu) / sqrt(variance / n)
-  result = NULL
   pvalue = NULL
 
   if(popVarKnown){
