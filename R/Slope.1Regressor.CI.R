@@ -13,17 +13,9 @@ Slope.1Regressor.CI <- function(form, data, n, alpha=0.05, one.sided=F){
 
   tvalue = abs(qt(alpha/2, df = n - 2, lower.tail=F))
 
-  model_summary = summary(lm(formula=formula(form), data))
+  estimates = GetSlopeEstimates(form, data)
 
-  standardDeviation_Beta1 = model_summary$coefficients[, "Std. Error"][2]
+  marginOfError = tvalue * estimates$error.beta1
 
-  names(standardDeviation_Beta1) <- NULL
-
-  slopeEstimate = model_summary$coefficients[, "Estimate"][2]
-
-  names(slopeEstimate) <- NULL
-
-  marginOfError = tvalue * standardDeviation_Beta1
-
-  IntervalOutput(slopeEstimate - marginOfError, slopeEstimate + marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
+  IntervalOutput(estimates$beta1 - marginOfError, estimates$beta1 + marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
 }
