@@ -9,6 +9,8 @@
 #' @export
 Slope.1Regressor.CI <- function(form, data, n, alpha=0.05, one.sided=F){
 
+  if(one.sided){ alpha = 2*alpha }
+
   tvalue = abs(qt(alpha/2, df = n - 2, lower.tail=F))
 
   model_summary = summary(lm(formula=formula(form), data))
