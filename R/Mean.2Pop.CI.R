@@ -44,5 +44,5 @@ Mean.2Pop.CI <- function(xbar1, xbar2, n1, n2, var1, var2, alpha=0.05, popVarKno
     }
   }
 
-  IntervalOutput(xbar, marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
+  IntervalOutput(xbar- marginOfError, xbar + marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
 }

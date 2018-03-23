@@ -23,5 +23,5 @@ Slope.1Regressor.CI <- function(form, data, n, alpha=0.05, one.sided=F){
 
   marginOfError = tvalue * standardDeviation_Beta1
 
-  IntervalOutput(slopeEstimate, marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
+  IntervalOutput(slopeEstimate - marginOfError, slopeEstimate + marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
 }

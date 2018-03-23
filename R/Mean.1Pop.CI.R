@@ -19,5 +19,5 @@ Mean.1Pop.CI <- function(xbar, variance, n, popVarKnown=F, alpha=0.05, one.sided
 
   marginOfError = testStat * sqrt(variance / n)
 
-  IntervalOutput(xbar, marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
+  IntervalOutput(xbar - marginOfError, xbar + marginOfError, GetConfidenceLevel(alpha), "Confidence", one.sided)
 }
