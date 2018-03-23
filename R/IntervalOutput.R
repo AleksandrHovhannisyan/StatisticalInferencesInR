@@ -1,16 +1,16 @@
-#' Used internally by all functions producing intervals of any sort (prediction, confidence)
+#' Used internally by all functions producing intervals of any sort (prediction or confidence)
 #' @keywords internal
-IntervalOutput <- function(xbar, marginOfError, confidence, confidenceOrPrediction="Confidence", one.sided){
+IntervalOutput <- function(lowerValue, upperValue, confidenceLevel, confidenceOrPrediction="Confidence", one.sided){
 
   interval = NULL
 
   if(one.sided){
-    cat(confidence, " One-Sided ", confidenceOrPrediction, " Intervals:\n\n", sep="")
-    interval = list(lowerBound=c(xbar - marginOfError, Inf), upperBound=c(0, xbar + marginOfError))
+    cat(confidenceLevel, " One-Sided ", confidenceOrPrediction, " Intervals:\n\n", sep="")
+    interval = list(lowerBound=c(lowerValue, Inf), upperBound=c(0, upperValue))
   }
   else{
-    cat(confidence, " Two-Sided ", confidenceOrPrediction, " Interval:\n\n", sep="")
-    interval = c(xbar - marginOfError, xbar + marginOfError)
+    cat(confidenceLevel, " Two-Sided ", confidenceOrPrediction, " Interval:\n\n", sep="")
+    interval = c(lowerValue, upperValue)
   }
 
   return(interval)

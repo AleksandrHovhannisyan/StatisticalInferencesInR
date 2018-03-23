@@ -2,12 +2,12 @@
 % Please edit documentation in R/IntervalOutput.R
 \name{IntervalOutput}
 \alias{IntervalOutput}
-\title{Used internally by all functions producing intervals of any sort (prediction, confidence)}
+\title{Used internally by all functions producing intervals of any sort (prediction or confidence)}
 \usage{
-IntervalOutput(xbar, marginOfError, confidence,
+IntervalOutput(lowerValue, upperValue, confidenceLevel,
   confidenceOrPrediction = "Confidence", one.sided)
 }
 \description{
-Used internally by all functions producing intervals of any sort (prediction, confidence)
+Used internally by all functions producing intervals of any sort (prediction or confidence)
 }
 \keyword{internal}
