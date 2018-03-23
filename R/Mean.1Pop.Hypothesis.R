@@ -9,7 +9,7 @@
 #'@param alpha the significance level. Set to 0.05 by default.
 #'@return The test statistic, p-value, and conclusion of the hypothesis.
 #'@export
-Mean.1Pop.Hypothesis = function(xbar, mu, variance, n, popVarKnown=T, alternative="two.sided", alpha=0.05){
+Mean.1Pop.Hypothesis <- function(xbar, mu, variance, n, popVarKnown=T, alternative="two.sided", alpha=0.05){
 
   if(!(alternative %in% c("smaller", "greater", "two.sided"))){
     stop(message=("Parameter alternative must be 'smaller', 'greater', or 'two.sided'"))
@@ -18,7 +18,6 @@ Mean.1Pop.Hypothesis = function(xbar, mu, variance, n, popVarKnown=T, alternativ
   testStat = (xbar - mu) / sqrt(variance / n)
   result = NULL
   pvalue = NULL
-  conclusion = "Fail to reject null hypothesis."
 
   if(popVarKnown){
     if(alternative=="greater"){ pvalue = pnorm(testStat, lower.tail = F) }
